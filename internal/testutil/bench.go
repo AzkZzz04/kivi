@@ -159,6 +159,15 @@ func TempDir() (string, error) {
 	return os.MkdirTemp("", "tinyrocks-test-*")
 }
 
+// MustTempDir creates a temporary directory or fatals (for test helper)
+func MustTempDir(t interface{ Fatal(args ...interface{}) }) string {
+	dir, err := os.MkdirTemp("", "tinyrocks-test-*")
+	if err != nil {
+		t.Fatal(err)
+	}
+	return dir
+}
+
 // CleanupDir removes a directory and all its contents.
 func CleanupDir(path string) error {
 	return os.RemoveAll(path)
