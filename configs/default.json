@@ -1,0 +1,18 @@
+{
+  "wal_dir": "wal",
+  "wal_group_commit_ms": 10,
+  "memtable_mb": 64,
+  "block_size_kb": 16,
+  "restart_interval": 16,
+  "bloom_bits_per_key": 10,
+  "fanout": 10,
+  "max_background_compactions": 2,
+  "l0_slowdown": 8,
+  "l0_stop": 12,
+  "compaction_rate_limit_mb_s": 512,
+  "flush_parallelism": 2,
+  "block_cache_mb": 256,
+  "prefetch_on_seek": false,
+  "data_dir": "data"
+}
+

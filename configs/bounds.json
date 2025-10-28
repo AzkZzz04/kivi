@@ -1,0 +1,16 @@
+{
+  "memtable_mb": [16, 512],
+  "block_size_kb": [4, 8, 16, 32],
+  "restart_interval": [4, 32],
+  "bloom_bits_per_key": [6, 14],
+  "fanout": [4, 12],
+  "max_background_compactions": [1, 8],
+  "l0_slowdown": [4, 24],
+  "l0_stop": [8, 36],
+  "wal_group_commit_ms": [0, 20],
+  "flush_parallelism": [1, 8],
+  "compaction_rate_limit_mb_s": [0, 1024],
+  "block_cache_mb": [64, 4096],
+  "prefetch_on_seek": [false, true]
+}
+
